@@ -1,0 +1,66 @@
+[
+    {
+        "id": "1305d8872506f5d9",
+        "type": "ui_chart",
+        "z": "2b1b820baee57d9b",
+        "name": "",
+        "group": "67567f983ebc06f2",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "label": "Humedad",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1120,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "67567f983ebc06f2",
+        "type": "ui_group",
+        "name": "Historico Grupal Sensores",
+        "tab": "0693a817f57e6db3",
+        "order": 4,
+        "disp": true,
+        "width": "15",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0693a817f57e6db3",
+        "type": "ui_tab",
+        "name": "Estacion climatica conjunta",
+        "icon": "dashboard",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    }
+]
