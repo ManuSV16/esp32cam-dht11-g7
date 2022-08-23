@@ -2,8 +2,8 @@
  * Envío de información del DHT11 por MQTT
  * por: Hugo Escalpelo
  * Fecha: 28 de julio de 2021
- * Actualizado por: Hugo Escalpelo
- * Fecha: 16 de agosto de 2022
+ * Actualizado por: Manuel Sanchez
+ * Fecha: 23 |de agosto de 2022
  * 
  * Este programa realiza la lectura del sensor DHT11 con ayuda de la biblioteca
  * de Adafruit y envía el temperatura y humedad relativa por MQTT en un JSON.
@@ -29,12 +29,12 @@
 #define DHTTYPE DHT11 // Configura el modelo de sensor, compatible también con DHT22
 
 //Datos de WiFi
-const char* ssid = "AXTEL XTREMO-18D6";  // Aquí debes poner el nombre de tu red
-const char* password = "038C18D6";  // Aquí debes poner la contraseña de tu red
+const char* ssid = "Arknet16_2.4Gnormal";  // Aquí debes poner el nombre de tu red
+const char* password = "96luam21A";  // Aquí debes poner la contraseña de tu red
 
 //Datos del broker MQTT
-const char* mqtt_server = "192.168.15.27"; // Si estas en una red local, coloca la IP asignada, en caso contrario, coloca la IP publica
-IPAddress server(192,168,15,27);
+const char* mqtt_server = "192.168.100.73"; // Si estas en una red local, coloca la IP asignada, en caso contrario, coloca la IP publica
+IPAddress server(192,168,100,73);
 
 // Objetos
 WiFiClient espClient; // Este objeto maneja los datos de conexion WiFi
@@ -121,7 +121,7 @@ void loop() {
     }
     
 
-    String json = "{\"id\":\"Hugo\",\"temp\":"+String(t)+",\"hum\":"+String(h)+"}";
+    String json = "{\"id\":\"Manuel\",\"temp\":"+String(t)+",\"hum\":"+String(h)+"}";
     Serial.println(json); // Se imprime en monitor solo para poder visualizar que el string esta correctamente creado
     int str_len = json.length() + 1;//Se calcula la longitud del string
     char char_array[str_len];//Se crea un arreglo de caracteres de dicha longitud
